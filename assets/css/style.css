@@ -4,7 +4,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
 }
-.start{
+#start1, #start2{
   padding-left: 2%;
 }
 
@@ -20,5 +20,5 @@ body {
 
 img {
   width: 100px;
-  
+
 }
