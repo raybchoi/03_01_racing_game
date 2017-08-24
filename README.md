@@ -4,9 +4,7 @@ This is a demo of a racing game.
 
 Technologies Used
 
-jQuery
-HTML
-CSS
+1) jQuery 2) HTML 3)CSS
 
-I am 10 days in to the WDI course and I am very proud of the game that I was able to create.
+I am 10 days in to the WDI course and I super happy with the outcome!
 Please feel free to leave your comments!
