@@ -19,13 +19,13 @@ const players = [
       'player': 3,
       'name': 'michael',
       'img': 'assets/img/michael_1.png',
-      'speed': '+=50%',
+      'speed': '+=8%',
     },
     {
       'player': 4,
       'name': 'ralph',
       'img': 'assets/img/ralph_1.png',
-      'speed': '+=25%',
+      'speed': '+=6%',
     },
   ];
 
@@ -42,15 +42,15 @@ $(document).ready(function(){
 
 
   const winCounter = function () {
-    $('.middleleft').html(`Player One Wins: ${playerOneWinCounter}`);
-    $('.middleright').html(`Player Two Wins: ${playerTwoWinCounter}`);
+    $('.middleleft').html(`Team A: ${playerOneWinCounter}`);
+    $('.middleright').html(`Team B: ${playerTwoWinCounter}`);
   }
 
   const restart = function() {
     console.log('clicked')
     $('#p1, #p2').remove();
-    selectPlayer();
     gameOver = false;
+    selectPlayer();
   }
 
   //---------------- players move ----------------
@@ -74,17 +74,17 @@ $(document).ready(function(){
   }
 
     //---------------- select characters move ----------------
-  // const selectPlayer = function () {
-  //   console.log('selectPlayer function')
-  //   $('#start1').html(`<img id='p1' src=${players[playerOne].img}>`);
-  //   $('#start2').html(`<img id='p2' src=${players[playerTwo].img}>`);
-  // }
+  const selectPlayer = function () {
+    console.log('selectPlayer function')
+    $('#start1').html(`<img id='p1' src=${players[playerOne].img}>`);
+    $('#start2').html(`<img id='p2' src=${players[playerTwo].img}>`);
+  }
 
   const selectPlayerOne = function () {
     console.log('selectPlayer function 1')
     $('#start1').html(`<img id='p1' src=${players[playerOne].img}>`);
-    $("#overlay").hide();
-    $("#overlay2").show();
+    $("#overlay-sel-t1").hide();
+    $("#overlay-sel-t2").show();
     selectPlayerTwoImage();
     // $('#start1').html(`<p id=p1><img src=${players[0].img}></p>`)
     // $('#start2').html(`<p id=p2><img src=${players[1].img}></p>`)
@@ -93,13 +93,13 @@ $(document).ready(function(){
   const selectPlayerTwo = function () {
     console.log('selectPlayer function 2')
     $('#start2').html(`<img id='p2' src=${players[playerTwo].img}>`);
-    $("#overlay2").hide();
+    $("#overlay-sel-t2").hide();
     // $('#start1').html(`<p id=p1><img src=${players[0].img}></p>`)
     // $('#start2').html(`<p id=p2><img src=${players[1].img}></p>`)
   }
 
   const selectPlayerOneImage = function () {
-    $("#overlay").show();
+    $("#overlay-sel-t1").show();
     $('.don1').on('click', function(){
       playerOne = 0;
       selectPlayerOne();
@@ -163,11 +163,13 @@ $(document).ready(function(){
       playerOneWinCounter++;
       winCounter();
       console.log('Player 1 is the winner');
+      $("#overlay-win-t1").show();
     } else if ( currentPlayerTwoPosition >= winScreenSize ) {
       gameOver = true;
       playerTwoWinCounter++;
       winCounter();
       console.log('Player 2 is the winner');
+      $("#overlay-win-t2").show();
     }
   }
 
@@ -179,18 +181,9 @@ $(document).ready(function(){
   }
 
   //---------------- Creation of overlay ----------------
-  $(".create-overlay").on("click", function() {
-    // $("#overlay").css("display", "block");
-    $("#overlay").show();
-  });
-  $(".close-overlay").on("click", function() {
-    // $("#overlay").css("display", "none");
-    $("#overlay").hide();
-    $("#overlay2").show();
-  });
-  $(".close-overlay2").on("click", function() {
-    // $("#overlay").css("display", "none");
-    $("#overlay2").hide();
+  $(".win-message").on("click", function() {
+    $("#overlay-win-t1").hide();
+    $("#overlay-win-t2").hide();
   });
 
 

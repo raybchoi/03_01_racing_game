@@ -18,18 +18,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="vendor/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
   </head>
   <body>
     <div class='header'>
-      <h1>Ninja Turtles Racing Game</h1>
-      <h3>Press ' to move Player 1 and a to move Player 2</h3>
+      <div>Ninja Turtles Racers</div>
+      <h3>Press ' to move Turtle 1 and a to move Turtle 2</h3>
+      <br>
     </div>
 
 
 
-    <div>
-    <div class='middleleft' style="display:inline"> </div>
-    <div class='middleright' style="float:right" style="display:inline"></div>
+    <div class='point-counter'>
+      <div class='middleleft'></div>
+      <div class='middleright'></div>
+      <!-- <div class='middleleft' style="display:inline"> </div>
+      <div class='middleright' style="float:right" style="display:inline"></div> -->
     </div>
     <div class='itembuttons'>
       <button class="reset-game">Reset Game</button>
@@ -63,28 +67,47 @@
       </div>
     </div> -->
 
-    <div id='overlay'>
+    <div id='overlay-sel-t1'>
       <div class='center-pics'>
         <h3>Player One Select Your Turtle</h3>
         <img class='don1' src='assets/img/don_1.png'>
         <img class='leo1' src='assets/img/leo_1.png'>
         <img class='michael1' src='assets/img/michael_1.png'>
         <img class='ralph1' src='assets/img/ralph_1.png'>
-        <button class="close-overlay">Close</button>
+        <!-- <button class="close-overlay">Close</button> -->
       </div>
     </div>
 
 
-    <div id='overlay2'>
+    <div id='overlay-sel-t2'>
       <div class='center-pics'>
         <h3>Player Two Select Your Turtle</h3>
         <img class='don2' src='assets/img/don_1.png'>
         <img class='leo2' src='assets/img/leo_1.png'>
         <img class='michael2' src='assets/img/michael_1.png'>
         <img class='ralph2' src='assets/img/ralph_1.png'>
-        <button class="close-overlay2">Close</button>
       </div>
     </div>
+
+    <div id='overlay-win-t1' class='win-message'>
+      <div class='center-pics'>
+        <h2>Turtle 1 Winner!</h2>
+        <img class='winner-overlay-img' src='assets/img/tmnt1.png'>
+        <h4>Click on "Reset Game" to play again!</h4>
+      </div>
+    </div>
+
+    <div id='overlay-win-t2' class='win-message'>
+      <div class='center-pics'>
+        <h2>Turtle 2 Winner!</h2>
+        <img class='winner-overlay-img' src='assets/img/tmnt2.png'>
+        <h4>Click on "Reset Game" to play again!</h4>
+      </div>
+    </div>
+
+    </div>
+
+
 
     <!-- Modal -->
 
