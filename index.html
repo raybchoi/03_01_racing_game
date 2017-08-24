@@ -9,33 +9,84 @@
     <!--jQuery Library  -->
     <script src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
     <!--Main Application  -->
     <script type="text/javascript" src="assets/js/app.js"></script>
 
     <!--CSS-->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="vendor/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
   <body>
-    <div class="container">
-      <div class='row'>
-        <div class="col-md-2"></div>
-        <div class="col-md-2 middleleft"></div>
-        <div class="col-md-4"></div>
-        <div class="col-md-2 middleright"></div>
-        <div class="col-md-2"></div>
-    </div>
+    <div class='header'>
+      <h1>Ninja Turtles Racing Game</h1>
+      <h3>Press ' to move Player 1 and a to move Player 2</h3>
     </div>
 
-    <!-- <div class="container"> -->
-    <div id='start1'>
+
+
+    <div>
+    <div class='middleleft' style="display:inline"> </div>
+    <div class='middleright' style="float:right" style="display:inline"></div>
     </div>
-    <div id='start2'>
+    <div class='itembuttons'>
+      <button class="reset-game">Reset Game</button>
+      <button class="change-char">Change Characters</button>
+      <button class="reset-score">Reset Score</button>
     </div>
-    <button class="reset">Reset</button>
-  <!-- </div> -->
+
+    <!-- <div class="container">
+      <div class='row'>
+        <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-4 box middleleft"></div>
+            <div class="col-md-4 box"></div>
+            <div class="col-md-4 box middleright"></div>
+        </div>
+      </div>
+    </div> -->
+    <div class='start'>
+      <div id='start1'>
+      </div>
+      <div id='start2'>
+      </div>
+    </div>
+
+    <!-- <div id='overlay'>
+      <div class='center-pics'>
+        <img class='don1 don2' src='assets/img/don_1.png'>
+        <img class='leo1 leo2' src='assets/img/leo_1.png'>
+        <img class='michael1 michael2' src='assets/img/michael_1.png'>
+        <img class='ralph1 ralph2' src='assets/img/ralph_1.png'>
+        <button class="close-overlay">Close</button>
+      </div>
+    </div> -->
+
+    <div id='overlay'>
+      <div class='center-pics'>
+        <h3>Player One Select Your Turtle</h3>
+        <img class='don1' src='assets/img/don_1.png'>
+        <img class='leo1' src='assets/img/leo_1.png'>
+        <img class='michael1' src='assets/img/michael_1.png'>
+        <img class='ralph1' src='assets/img/ralph_1.png'>
+        <button class="close-overlay">Close</button>
+      </div>
+    </div>
+
+
+    <div id='overlay2'>
+      <div class='center-pics'>
+        <h3>Player Two Select Your Turtle</h3>
+        <img class='don2' src='assets/img/don_1.png'>
+        <img class='leo2' src='assets/img/leo_1.png'>
+        <img class='michael2' src='assets/img/michael_1.png'>
+        <img class='ralph2' src='assets/img/ralph_1.png'>
+        <button class="close-overlay2">Close</button>
+      </div>
+    </div>
+
+    <!-- Modal -->
 
   </body>
 </html>
